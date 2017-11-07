@@ -4,8 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sulmar.WPFMVVM.ShopPracz.WPFClient.Views"
+        xmlns:vm="clr-namespace:Sulmar.WPFMVVM.ShopPracz.ViewModels;assembly=Sulmar.WPFMVVM.ShopPracz.ViewModels"
         mc:Ignorable="d"
         Title="OrdersView" Height="300" Width="300">
+
+    <Window.DataContext>
+        <vm:OrdersViewModel />
+    </Window.DataContext>
+    
     <Grid>
 
         <StackPanel>
@@ -15,12 +21,19 @@
                 <TabItem Header="Tab 3">Content 3</TabItem>
             </TabControl>-->
 
-            <ListBox>
-                <ListBoxItem>Item 1</ListBoxItem>
-                <ListBoxItem>Item 2</ListBoxItem>
-                <ListBoxItem>Item 3</ListBoxItem>
-                <ListBoxItem>Item 4</ListBoxItem>
-                <ListBoxItem>Item 5</ListBoxItem>
+            <ListBox ItemsSource="{Binding Orders}">
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding Number}"/>
+                            <Label Content="{Binding OrderDate}" />
+                            <Label Content="{Binding Customer.Name}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                    
+              
             </ListBox>
 
         </StackPanel>

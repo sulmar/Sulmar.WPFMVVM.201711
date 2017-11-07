@@ -15,8 +15,16 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         private IOrdersService ordersService;
 
 
-        public OrdersViewModel()
+
+        public OrdersViewModel() 
+            : this(new MockOrdersService())
         {
+        }
+
+        public OrdersViewModel(IOrdersService ordersService)
+        {
+            this.ordersService = ordersService;
+
             Load();
         }
 

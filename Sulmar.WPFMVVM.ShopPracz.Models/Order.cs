@@ -18,6 +18,11 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
 
         public ICollection<OrderDetail> Details { get; set; }
 
+        //public override string ToString()
+        //{
+        //    return $"{Number} {OrderDate}";
+        //}
+
     }
 
     public enum OrderStatus

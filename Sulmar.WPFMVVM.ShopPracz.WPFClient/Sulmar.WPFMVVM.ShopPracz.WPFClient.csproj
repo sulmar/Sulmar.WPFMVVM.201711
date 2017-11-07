@@ -172,6 +172,10 @@
       <Project>{FE176A03-EF03-4209-937D-D104FE805309}</Project>
       <Name>Sulmar.WPFMVVM.ShopPracz.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.ViewModels\Sulmar.WPFMVVM.ShopPracz.ViewModels.csproj">
+      <Project>{f7102884-5525-410a-ba0e-e43667ffd60a}</Project>
+      <Name>Sulmar.WPFMVVM.ShopPracz.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

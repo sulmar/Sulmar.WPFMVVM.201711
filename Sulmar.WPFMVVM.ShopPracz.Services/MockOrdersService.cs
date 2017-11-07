@@ -48,7 +48,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.Services
 
         public ICollection<Order> Get()
         {
-            throw new NotImplementedException();
+            return orders;
         }
     }
 }
