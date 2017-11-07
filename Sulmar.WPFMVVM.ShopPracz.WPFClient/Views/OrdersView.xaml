@@ -21,18 +21,11 @@
                 <TabItem Header="Tab 3">Content 3</TabItem>
             </TabControl>-->
 
-            <ListBox ItemsSource="{Binding Orders}">
+            <ListBox ItemsSource="{Binding Orders}"
+                     ItemTemplate="{StaticResource OrderTemplate}"
+                     >
 
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="{Binding Number}"/>
-                            <Label Content="{Binding OrderDate}" />
-                            <Label Content="{Binding Customer.Name}" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-                    
+             
               
             </ListBox>
 
