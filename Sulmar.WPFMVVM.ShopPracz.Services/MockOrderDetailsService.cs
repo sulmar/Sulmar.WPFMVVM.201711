@@ -22,13 +22,13 @@ namespace Sulmar.WPFMVVM.ShopPracz.Services
             orderDetails = new List<OrderDetail>
             {
                 // zam 1
-                new OrderDetail { Id = 1, OrderId = 1, Product = products[0], Quantity = 1 },
-                new OrderDetail { Id = 2, OrderId = 1, Product = products[1], Quantity = 5 },
+                new OrderDetail { Id = 1, OrderId = 1, Product = products[0], Quantity = 1, UnitPrice = products[0].Price },
+                new OrderDetail { Id = 2, OrderId = 1, Product = products[1], Quantity = 5, UnitPrice = products[1].Price },
 
                 // zam 2
-                new OrderDetail { Id = 3, OrderId = 2, Product = products[0], Quantity = 2 },
-                new OrderDetail { Id = 4, OrderId = 2, Product = products[1], Quantity = 1 },
-                new OrderDetail { Id = 5, OrderId = 2, Product = products[2], Quantity = 1 },
+                new OrderDetail { Id = 3, OrderId = 2, Product = products[0], Quantity = 2, UnitPrice = products[0].Price },
+                new OrderDetail { Id = 4, OrderId = 2, Product = products[1], Quantity = 1, UnitPrice = products[1].Price },
+                new OrderDetail { Id = 5, OrderId = 2, Product = products[2], Quantity = 1, UnitPrice = products[2].Price },
             };
         }
 
