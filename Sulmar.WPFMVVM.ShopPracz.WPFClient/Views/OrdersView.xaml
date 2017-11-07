@@ -15,21 +15,54 @@
     <Grid>
 
         <StackPanel>
+
+            <DockPanel>
+                <Button 
+                    Command="{Binding CalculateCommand}" 
+                    Content="Calculate"  />
+            </DockPanel>
+            
             <!--<TabControl>
                 <TabItem Header="Tab 1">Content 1</TabItem>
                 <TabItem Header="Tab 2">Content 2</TabItem>
                 <TabItem Header="Tab 3">Content 3</TabItem>
             </TabControl>-->
 
-            <ListBox ItemsSource="{Binding Orders}"
+            <!--<ListBox ItemsSource="{Binding Orders}"
                      SelectedItem="{Binding SelectedOrder}"
                      ItemTemplate="{StaticResource OrderTemplate}"
-                     />
+                     />-->
 
-            <ListBox 
+            <DataGrid ItemsSource="{Binding Orders}"
+                      SelectedItem="{Binding SelectedOrder}"
+                      AutoGenerateColumns="False"
+                      >
+              
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nr" Binding="{Binding Number}" />
+                    <DataGridTextColumn Header="Data" Binding="{Binding OrderDate}" />
+                    <DataGridTextColumn Header="Klient" Binding="{Binding Customer.Name}" />
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+            <DataGrid ItemsSource="{Binding SelectedOrder.Details}"
+                      AutoGenerateColumns="False"
+                      >
+             
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nr" Binding="{Binding Product.Name}" />
+                    <DataGridTextColumn Header="Data" Binding="{Binding Quantity}" />
+                    <DataGridTextColumn Header="Klient" Binding="{Binding Price}" />
+                    <DataGridTextColumn Header="Status" Binding="{Binding Amount}" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!--<ListBox 
                 ItemsSource="{Binding SelectedOrder.Details}"
                     
-                     />
+                     />-->
 
 
 

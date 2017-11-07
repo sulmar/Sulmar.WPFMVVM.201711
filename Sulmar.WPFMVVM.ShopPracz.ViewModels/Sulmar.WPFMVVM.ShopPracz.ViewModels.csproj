@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Sulmar.WPFMVVM.Common\Sulmar.WPFMVVM.Common.csproj">
+      <Project>{F1B84291-B79B-4C3C-991A-C76AF9393F37}</Project>
+      <Name>Sulmar.WPFMVVM.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Models\Sulmar.WPFMVVM.ShopPracz.Models.csproj">
       <Project>{FE176A03-EF03-4209-937D-D104FE805309}</Project>
       <Name>Sulmar.WPFMVVM.ShopPracz.Models</Name>

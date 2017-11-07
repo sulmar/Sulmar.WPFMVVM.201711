@@ -1,10 +1,12 @@
-﻿using Sulmar.WPFMVVM.ShopPracz.Models;
+﻿using Sulmar.WPFMVVM.Common;
+using Sulmar.WPFMVVM.ShopPracz.Models;
 using Sulmar.WPFMVVM.ShopPracz.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
 {
@@ -27,8 +29,8 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
             }
         }
 
-        private IOrdersService ordersService;
-        private IOrderDetailsService orderDetailsService;
+        private readonly IOrdersService ordersService;
+        private readonly IOrderDetailsService orderDetailsService;
 
 
 
@@ -54,5 +56,28 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         {
             SelectedOrder.Details = orderDetailsService.Get(SelectedOrder.Id);
         }
+
+
+        #region CalculateCommand
+
+        public ICommand CalculateCommand
+        {
+            get
+            {
+                return new RelayCommand(p => Calculate(p), p => CanCalculate(p));
+            }
+        }
+
+        public void Calculate(object p)
+        {
+            Console.WriteLine($"Calculate {this.SelectedOrder.Number}");
+        }
+
+        public bool CanCalculate(object p)
+        {
+            return this.SelectedOrder!=null;
+        }
+
+        #endregion
     }
 }

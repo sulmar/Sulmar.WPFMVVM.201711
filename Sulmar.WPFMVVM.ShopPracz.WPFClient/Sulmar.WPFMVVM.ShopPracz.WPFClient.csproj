@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CalculateCommand.cs" />
     <Compile Include="Views\BindingView.xaml.cs">
       <DependentUpon>BindingView.xaml</DependentUpon>
     </Compile>
