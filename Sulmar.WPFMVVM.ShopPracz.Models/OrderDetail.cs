@@ -14,6 +14,8 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
 
         public decimal UnitPrice { get; set; }
 
+        public decimal TaxRate { get; set; }
+
         public decimal Amount
         {
             get
