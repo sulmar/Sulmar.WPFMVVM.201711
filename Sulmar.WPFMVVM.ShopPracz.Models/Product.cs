@@ -10,6 +10,37 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
 
         public string Name { get; set; }
 
-        public string Color { get; set; }
+        #region Color
+
+        private string color;
+
+        public string Color
+        {
+            get { return color; }
+            set
+            {
+                color = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
+
+        #region Price
+     
+        private decimal price;
+
+        public decimal Price
+        {
+            get { return price; }
+            set
+            {
+                price = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
+
     }
 }
