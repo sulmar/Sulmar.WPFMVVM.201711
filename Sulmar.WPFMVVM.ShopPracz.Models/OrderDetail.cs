@@ -23,5 +23,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
                 return UnitPrice * Quantity;
             }
         }
+
+        public int OrderId { get; set; }
     }
 }

@@ -22,12 +22,14 @@
             </TabControl>-->
 
             <ListBox ItemsSource="{Binding Orders}"
+                     SelectedItem="{Binding SelectedOrder}"
                      ItemTemplate="{StaticResource OrderTemplate}"
-                     >
+                     />
 
-             
-              
-            </ListBox>
+            <ListBox ItemsSource="{Binding SelectedOrder.Details}"
+                     />
+
+
 
         </StackPanel>
     </Grid>

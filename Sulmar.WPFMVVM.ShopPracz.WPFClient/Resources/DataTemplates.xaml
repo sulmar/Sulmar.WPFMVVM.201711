@@ -9,5 +9,14 @@
             <Button Content="{Binding Customer.Name}" />
         </StackPanel>
     </DataTemplate>
+
+    <DataTemplate x:Key="OrderDetailTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="{Binding Product.Name}" />
+            <Label Content="{Binding Quantity}" />
+            <Label Content="{Binding UnitPrice}" />
+            <Label Content="{Binding Amount}" />
+        </StackPanel>
+    </DataTemplate>
     
 </ResourceDictionary>

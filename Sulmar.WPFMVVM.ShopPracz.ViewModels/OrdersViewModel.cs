@@ -12,18 +12,35 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
     {
         public ICollection<Order> Orders { get; set; }
 
+        private Order selectedOrder;
+        public Order SelectedOrder
+        {
+            get
+            {
+                return selectedOrder;
+            }
+
+            set
+            {
+                selectedOrder = value;
+                GetOrderDetailsOfSelectedOrder();
+            }
+        }
+
         private IOrdersService ordersService;
+        private IOrderDetailsService orderDetailsService;
 
 
 
         public OrdersViewModel() 
-            : this(new MockOrdersService())
+            : this(new MockOrdersService(), new MockOrderDetailsService())
         {
         }
 
-        public OrdersViewModel(IOrdersService ordersService)
+        public OrdersViewModel(IOrdersService ordersService, IOrderDetailsService orderDetailsService)
         {
             this.ordersService = ordersService;
+            this.orderDetailsService = orderDetailsService;
 
             Load();
         }
@@ -31,6 +48,11 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         private void Load()
         {
             Orders = ordersService.Get();
+        }
+
+        private void GetOrderDetailsOfSelectedOrder()
+        {
+            SelectedOrder.Details = orderDetailsService.Get(SelectedOrder.Id);
         }
     }
 }

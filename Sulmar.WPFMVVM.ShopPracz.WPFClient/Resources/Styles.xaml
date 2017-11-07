@@ -5,8 +5,14 @@
 
     
     <SolidColorBrush x:Key="MyBackgroundBrush">Red</SolidColorBrush>
-    
-    <!-- styl bazowy -->
+
+
+    <Style TargetType="Label">
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+   
+        <!-- styl bazowy -->
     
     <Style x:Key="BaseButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource MyBackgroundBrush}" />
