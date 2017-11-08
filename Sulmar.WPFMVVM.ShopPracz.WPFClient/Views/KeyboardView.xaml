@@ -6,18 +6,40 @@
              xmlns:local="clr-namespace:Sulmar.WPFMVVM.ShopPracz.WPFClient.Views"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <Style TargetType="Button" >
+            <Setter Property="Background" Value="Blue" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="24" />
+        </Style>
+    </UserControl.Resources>
     <Grid>
 
         <UniformGrid>
-            <Button Content="1" />
-            <Button Content="2" />
-            <Button Content="3" />
-            <Button Content="4" />
+
+            <Button Content="{Binding Filter.Segments[0].Name}"
+                    Command="{Binding InspectionCommand}"
+                    CommandParameter="{Binding Filter.Segments[0]}"
+                    />
+            
+            <Button Content="{Binding Filter.Segments[1].Name}"
+                    Command="{Binding InspectionCommand}" 
+                    CommandParameter="{Binding Filter.Segments[1]}"
+                    />
+            
+            <Button Content="{Binding Filter.Segments[2].Name}"
+                    Command="{Binding InspectionCommand}"
+                    CommandParameter="{Binding Filter.Segments[2]}"
+                    />
+            
+            
+            <Button Content="{Binding Filter.Segments[3].Name}" />
             <Border BorderThickness="1" BorderBrush="Black" />
-            <Button Content="6" />
-            <Button Content="7" />
-            <Button Content="8" />
-            <Button Content="9" />
+            <Button Content="{Binding Filter.Segments[4].Name}" />
+            <Button Content="{Binding Filter.Segments[5].Name}" />
+            <Button Content="{Binding Filter.Segments[6].Name}" />
+            <Button Content="{Binding Filter.Segments[7].Name}" />
         </UniformGrid>
             
     </Grid>
