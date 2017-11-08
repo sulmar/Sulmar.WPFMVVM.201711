@@ -1,4 +1,4 @@
-﻿using Sulmar.WPFMVVM.Common;
+﻿using Sulmar.WPFMVVM.Common4;
 using Sulmar.WPFMVVM.ShopPracz.Models;
 using Sulmar.WPFMVVM.ShopPracz.Services;
 using System;
@@ -25,7 +25,12 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
             set
             {
                 selectedOrder = value;
+                
+                // wyzwalamy sprawdzenie CanExecute
+               // CalculateCommand.OnCanExecuteChanged();
+
                 GetOrderDetailsOfSelectedOrder();
+                OnPropertyChanged();
             }
         }
 
@@ -60,7 +65,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
 
         #region CalculateCommand
 
-        public ICommand CalculateCommand
+        public RelayCommand CalculateCommand
         {
             get
             {

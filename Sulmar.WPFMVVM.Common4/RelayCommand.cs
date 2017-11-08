@@ -1,26 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Sulmar.WPFMVVM.Common
+namespace Sulmar.WPFMVVM.Common4
 {
+    // Add reference to PresentationCore
+
     public class RelayCommand : ICommand
     {
-        public event EventHandler CanExecuteChanged;
 
-        // .NET 4.x
-        //public event EventHandler CanExecuteChanged
-        //{
-        //    add { CommandManager.RequerySuggested += value; }
-        //    remove { CommandManager.RequerySuggested -= value; }
-        //}
-
-        public void OnCanExecuteChanged()
+        public event EventHandler CanExecuteChanged
         {
-            if (CanExecuteChanged!=null)
-            {
-                CanExecuteChanged.Invoke(this, EventArgs.Empty);
-            }
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
         }
+
 
         private readonly Action<object> execute;
         private readonly Func<object, bool> canExecute;
