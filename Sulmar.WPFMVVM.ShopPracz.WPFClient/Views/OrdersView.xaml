@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Sulmar.WPFMVVM.ShopPracz.WPFClient.Views"
         xmlns:vm="clr-namespace:Sulmar.WPFMVVM.ShopPracz.ViewModels;assembly=Sulmar.WPFMVVM.ShopPracz.ViewModels"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:b="clr-namespace:Sulmar.WPFMVVM.ShopPracz.WPFClient.Behaviors"
         mc:Ignorable="d"
         Title="OrdersView" Height="300" Width="300">
     
@@ -26,7 +27,12 @@
             <DockPanel>
                 <Button 
                     Command="{Binding CalculateCommand}" 
-                    Content="Calculate"  />
+                    Content="Calculate">
+
+                    <i:Interaction.Behaviors>
+                        <b:ButtonBehavior  Order="{Binding SelectedOrder}" />
+                    </i:Interaction.Behaviors>
+                </Button>
             </DockPanel>
             
             <!--<TabControl>
