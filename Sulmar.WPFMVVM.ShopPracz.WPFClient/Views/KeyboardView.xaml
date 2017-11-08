@@ -18,7 +18,8 @@
 
         <UniformGrid>
 
-            <Button Content="{Binding Filter.Segments[0].Name}"
+            <Button 
+                    Content="{Binding Filter.Segments[0].State}"
                     Command="{Binding InspectionCommand}"
                     CommandParameter="{Binding Filter.Segments[0]}"
                     />

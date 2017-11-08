@@ -17,7 +17,23 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
     {
         public string Name { get; set; }
 
-        public SegmentState State { get; set; }
+        #region State
+
+        private SegmentState state;
+        public SegmentState State
+        {
+            get
+            {
+                return state;
+            }
+            set
+            {
+                state = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
     }
 
 
