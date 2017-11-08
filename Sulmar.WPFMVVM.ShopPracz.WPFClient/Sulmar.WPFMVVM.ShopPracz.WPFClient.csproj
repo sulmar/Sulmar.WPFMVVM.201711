@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CalculateCommand.cs" />
+    <Compile Include="Converters\SegmentStateToBrushConverter.cs" />
     <Compile Include="Views\BindingView.xaml.cs">
       <DependentUpon>BindingView.xaml</DependentUpon>
     </Compile>

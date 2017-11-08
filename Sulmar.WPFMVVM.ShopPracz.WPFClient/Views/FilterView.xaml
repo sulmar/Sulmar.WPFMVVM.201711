@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Title="FilterView" Height="300" Width="300">
 
+
     <Window.DataContext>
         <vm:FilterViewModel/>
     </Window.DataContext>
