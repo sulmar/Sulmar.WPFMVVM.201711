@@ -8,6 +8,28 @@
         mc:Ignorable="d"
         Title="FilterView" Height="300" Width="300">
 
+    <Window.Resources>
+        <SolidColorBrush x:Key="OKBrush">Green</SolidColorBrush>
+        <SolidColorBrush x:Key="Failure1Brush">Orange</SolidColorBrush>
+        <SolidColorBrush x:Key="Failure2Brush">Red</SolidColorBrush>
+
+        <Style x:Key="BaseStyle" TargetType="Button" >
+            <Setter Property="Background" Value="{StaticResource OKBrush}" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="24" />
+        </Style>
+
+        <Style x:Key="ButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding State}" Value="FailureA">
+                    <Setter Property="Background" Value="{StaticResource Failure1Brush}"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding State}" Value="FailureB">
+                    <Setter Property="Background" Value="{StaticResource Failure2Brush}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
 
     <Window.DataContext>
         <vm:FilterViewModel/>
@@ -27,6 +49,17 @@
                 <v:KeyboardView />
 
             </Border>
+
+            <!--<ListBox ItemsSource="{Binding Filter.Segments}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Button Style="{StaticResource ButtonStyle}" 
+                                    Content="{Binding Name}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>-->
         </DockPanel>
         
     </Grid>
