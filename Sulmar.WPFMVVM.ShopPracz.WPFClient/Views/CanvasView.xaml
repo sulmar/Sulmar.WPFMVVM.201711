@@ -23,7 +23,7 @@
                        Canvas.Top="40"
                        />
 
-            <Button Canvas.Left="100"
+            <Button Canvas.Left="120"
                     Canvas.Top="50"
                     >Draw</Button>
         </Canvas>

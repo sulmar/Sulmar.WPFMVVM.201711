@@ -18,12 +18,16 @@
             <Setter Property="Background" Value="{StaticResource OKBrush}" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontSize" Value="24" />
+
+ 
         </Style>
 
         <Style x:Key="Style1" TargetType="Button" BasedOn="{StaticResource BaseStyle}">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding Filter.Segments[1].State}" Value="FailureA">
                     <Setter Property="Background" Value="{StaticResource Failure1Brush}"/>
+                    <Setter Property="Width" Value="100" />
+                    <Setter Property="Height" Value="100" />
                 </DataTrigger>
                 <DataTrigger Binding="{Binding Filter.Segments[1].State}" Value="FailureB">
                     <Setter Property="Background" Value="{StaticResource Failure2Brush}"/>
