@@ -32,6 +32,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
                 unitPrice = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(Amount));
+
             }
         }
 
@@ -46,5 +47,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
         }
 
         public int OrderId { get; set; }
+
+
     }
 }
