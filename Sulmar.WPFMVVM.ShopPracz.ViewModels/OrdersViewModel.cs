@@ -12,7 +12,20 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
 {
     public class OrdersViewModel : BaseViewModel
     {
-        public ICollection<Order> Orders { get; set; }
+        private ICollection<Order> orders;
+        public ICollection<Order> Orders
+        {
+            get
+            {
+                return orders;
+            }
+
+            set
+            {
+                orders = value;
+                OnPropertyChanged();
+            }
+        }
 
         private Order selectedOrder;
         public Order SelectedOrder
@@ -48,8 +61,14 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         {
             this.ordersService = ordersService;
             this.orderDetailsService = orderDetailsService;
+        }
 
-            Load();
+        public RelayCommand LoadCommand
+        {
+            get
+            {
+                return new RelayCommand(p => Load());
+            }
         }
 
         private void Load()

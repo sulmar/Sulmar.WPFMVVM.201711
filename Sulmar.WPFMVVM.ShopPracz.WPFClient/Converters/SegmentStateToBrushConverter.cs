@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sulmar.WPFMVVM.ShopPracz.Models;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.WPFClient.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            Models.SegmentState state = (Models.SegmentState) value;
+            SegmentState state = (SegmentState) value;
 
             switch(state)
             {
