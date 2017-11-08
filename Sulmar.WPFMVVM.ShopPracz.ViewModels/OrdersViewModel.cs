@@ -80,7 +80,8 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
 
         public bool CanCalculate(object p)
         {
-            return this.SelectedOrder!=null;
+            return this.SelectedOrder!=null 
+                && SelectedOrder.Status == OrderStatus.Created;
         }
 
         #endregion

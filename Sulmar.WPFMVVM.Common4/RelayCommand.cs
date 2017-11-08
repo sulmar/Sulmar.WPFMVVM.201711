@@ -18,14 +18,13 @@ namespace Sulmar.WPFMVVM.Common4
             remove { CommandManager.RequerySuggested -= value; }
         }
 
-
         private readonly Action<object> execute;
         private readonly Func<object, bool> canExecute;
 
         // private readonly Predicate<object> canExecute2;
 
 
-        public RelayCommand(Action<object> execute, Func<object, bool> canExecute)
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
             this.execute = execute;
             this.canExecute = canExecute;
