@@ -42,5 +42,11 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
 
         #endregion
 
+
+       // public string Size { get; set; }
+
+
+        public float Weight { get; set; }
+
     }
 }
