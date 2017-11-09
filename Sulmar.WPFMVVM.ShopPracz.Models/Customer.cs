@@ -8,8 +8,5 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
 
         public string Name { get; set; }
 
-
-        public string Address { get; set; }
-
     }
 }

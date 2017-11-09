@@ -64,10 +64,6 @@
     <Compile Include="Migrations\201711091134451_RemoveSizeFromProduct.Designer.cs">
       <DependentUpon>201711091134451_RemoveSizeFromProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711091139476_AddAddressToCustomer.cs" />
-    <Compile Include="Migrations\201711091139476_AddAddressToCustomer.Designer.cs">
-      <DependentUpon>201711091139476_AddAddressToCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShopPraczContext.cs" />
@@ -98,9 +94,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711091134451_RemoveSizeFromProduct.resx">
       <DependentUpon>201711091134451_RemoveSizeFromProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711091139476_AddAddressToCustomer.resx">
-      <DependentUpon>201711091139476_AddAddressToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
