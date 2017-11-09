@@ -33,6 +33,14 @@
                         <b:ButtonBehavior  Order="{Binding SelectedOrder}" />
                     </i:Interaction.Behaviors>
                 </Button>
+
+                <Border Background="LightBlue" >
+                    <i:Interaction.Behaviors>
+                        <b:DragBehavior/>
+                    </i:Interaction.Behaviors>
+                    <TextBlock Text="Drag me around!" />
+                </Border>
+                
             </DockPanel>
             
             <!--<TabControl>
