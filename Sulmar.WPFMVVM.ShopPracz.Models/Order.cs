@@ -64,7 +64,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.Models
 
     }
 
-    public enum OrderStatus
+    public enum OrderStatus 
     {
         Created,
 
