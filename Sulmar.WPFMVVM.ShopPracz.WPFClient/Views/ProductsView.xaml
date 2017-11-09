@@ -15,9 +15,25 @@
 
     <Grid>
 
-        <Label HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               >Products View</Label>
-        
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top" 
+                        Orientation="Horizontal">
+                <Button Command="{Binding AddCommand}">Add</Button>
+                <Button>Update</Button>
+                <Button Command="{Binding RemoveCommand}">Remove</Button>
+            </StackPanel>
+
+            <DataGrid ItemsSource="{Binding Products}"
+                  SelectedItem="{Binding SelectedProduct}"
+                      AutoGenerateColumns="False"
+                  >
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" />
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+        </DockPanel>
     </Grid>
 </Page>
