@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using Sulmar.WPFMVVM.ShopPracz.Models;
+using System.Linq;
 
 namespace Sulmar.WPFMVVM.ShopPracz.Services
 {
     public class MockOrdersService : IOrdersService
     {
         private ICollection<Order> orders;
+
 
         public MockOrdersService()
         {
@@ -51,6 +53,11 @@ namespace Sulmar.WPFMVVM.ShopPracz.Services
         public ICollection<Order> Get()
         {
             return orders;
+        }
+
+        public Order Get(int id)
+        {
+            return orders.Single(o => o.Id == id);
         }
     }
 }

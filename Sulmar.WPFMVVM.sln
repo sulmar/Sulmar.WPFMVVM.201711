@@ -11,9 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.WPFMVVM.ShopPracz.Vi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.WPFMVVM.ShopPracz.Services", "Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.Services.csproj", "{F0811320-B8AC-4A6D-B1E9-93EB6164E12C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.WPFMVVM.Common", "Sulmar.WPFMVVM.Common\Sulmar.WPFMVVM.Common.csproj", "{F1B84291-B79B-4C3C-991A-C76AF9393F37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.WPFMVVM.Common", "Sulmar.WPFMVVM.Common\Sulmar.WPFMVVM.Common.csproj", "{F1B84291-B79B-4C3C-991A-C76AF9393F37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.WPFMVVM.Common4", "Sulmar.WPFMVVM.Common4\Sulmar.WPFMVVM.Common4.csproj", "{D95BA6DD-0E51-4488-BD96-23B215845D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.WPFMVVM.ShopPracz.DbServices", "Sulmar.WPFMVVM.ShopPracz.DbServices\Sulmar.WPFMVVM.ShopPracz.DbServices.csproj", "{DDDC76A6-01FC-436C-B30E-9FEF23BFE958}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D95BA6DD-0E51-4488-BD96-23B215845D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D95BA6DD-0E51-4488-BD96-23B215845D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D95BA6DD-0E51-4488-BD96-23B215845D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDDC76A6-01FC-436C-B30E-9FEF23BFE958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDDC76A6-01FC-436C-B30E-9FEF23BFE958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDDC76A6-01FC-436C-B30E-9FEF23BFE958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDDC76A6-01FC-436C-B30E-9FEF23BFE958}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

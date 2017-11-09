@@ -1,4 +1,5 @@
 ﻿using Sulmar.WPFMVVM.Common4;
+using Sulmar.WPFMVVM.ShopPracz.DbServices;
 using Sulmar.WPFMVVM.ShopPracz.Models;
 using Sulmar.WPFMVVM.ShopPracz.Services;
 using System;
@@ -50,10 +51,8 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         private readonly IOrdersService ordersService;
         private readonly IOrderDetailsService orderDetailsService;
 
-
-
         public OrdersViewModel() 
-            : this(new MockOrdersService(), new MockOrderDetailsService())
+            : this(new DbOrdersService(), new MockOrderDetailsService())
         {
         }
 
@@ -74,6 +73,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         private void Load()
         {
             Orders = ordersService.Get();
+
         }
 
         private void GetOrderDetailsOfSelectedOrder()
