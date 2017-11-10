@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Sulmar.WPFMVVM.ShopPracz.Models;
 using System.Linq;
+using Sulmar.WPFMVVM.ShopPracz.Services;
 
-namespace Sulmar.WPFMVVM.ShopPracz.Services
+namespace Sulmar.WPFMVVM.ShopPracz.MockServices
 {
     public class MockOrdersService : IOrdersService
     {

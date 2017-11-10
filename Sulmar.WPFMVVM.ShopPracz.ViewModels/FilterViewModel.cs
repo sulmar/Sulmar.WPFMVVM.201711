@@ -1,4 +1,5 @@
 ﻿using Sulmar.WPFMVVM.Common;
+using Sulmar.WPFMVVM.ShopPracz.MockServices;
 using Sulmar.WPFMVVM.ShopPracz.Models;
 using Sulmar.WPFMVVM.ShopPracz.Services;
 using System;

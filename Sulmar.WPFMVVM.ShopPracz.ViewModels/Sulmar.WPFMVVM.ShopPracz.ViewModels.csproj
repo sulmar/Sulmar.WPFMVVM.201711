@@ -56,6 +56,10 @@
       <Project>{F1B84291-B79B-4C3C-991A-C76AF9393F37}</Project>
       <Name>Sulmar.WPFMVVM.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sulmar.WPFMVVM.MockServices\Sulmar.WPFMVVM.ShopPracz.MockServices.csproj">
+      <Project>{38DA381F-6115-41ED-BE40-125ED18DC6AB}</Project>
+      <Name>Sulmar.WPFMVVM.ShopPracz.MockServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.DbServices\Sulmar.WPFMVVM.ShopPracz.DbServices.csproj">
       <Project>{DDDC76A6-01FC-436C-B30E-9FEF23BFE958}</Project>
       <Name>Sulmar.WPFMVVM.ShopPracz.DbServices</Name>
