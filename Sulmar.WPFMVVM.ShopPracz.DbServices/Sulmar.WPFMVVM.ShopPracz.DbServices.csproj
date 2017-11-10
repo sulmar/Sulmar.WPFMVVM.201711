@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DbProductsService.cs" />
     <Compile Include="ShopPraczContext.cs" />
   </ItemGroup>
   <ItemGroup>

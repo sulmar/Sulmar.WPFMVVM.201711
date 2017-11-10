@@ -1,4 +1,5 @@
 ﻿using Sulmar.WPFMVVM.Common4;
+using Sulmar.WPFMVVM.ShopPracz.DbServices;
 using Sulmar.WPFMVVM.ShopPracz.MockServices;
 using Sulmar.WPFMVVM.ShopPracz.Models;
 using Sulmar.WPFMVVM.ShopPracz.Services;
@@ -39,7 +40,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         }
 
         public ProductsViewModel()
-            : this(new MockProductsService())
+            : this(new DbProductsService())
         {
             
         }
@@ -81,6 +82,26 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         }
 
         private bool CanRemove()
+        {
+            return IsSelectedProduct;
+        }
+
+
+
+        public ICommand UpdateCommand
+        {
+            get
+            {
+                return new RelayCommand(p => Update(), p => CanUpdate());
+            }
+        }
+
+        private void Update()
+        {
+            productsService.Update(SelectedProduct);
+        }
+
+        private bool CanUpdate()
         {
             return IsSelectedProduct;
         }
