@@ -68,9 +68,9 @@
       <Project>{FE176A03-EF03-4209-937D-D104FE805309}</Project>
       <Name>Sulmar.WPFMVVM.ShopPracz.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.Services.csproj">
+    <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.IServices.csproj">
       <Project>{F0811320-B8AC-4A6D-B1E9-93EB6164E12C}</Project>
-      <Name>Sulmar.WPFMVVM.ShopPracz.Services</Name>
+      <Name>Sulmar.WPFMVVM.ShopPracz.IServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

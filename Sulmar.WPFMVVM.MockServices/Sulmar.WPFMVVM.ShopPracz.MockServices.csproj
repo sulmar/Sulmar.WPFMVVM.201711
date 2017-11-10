@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Models\Sulmar.WPFMVVM.ShopPracz.Models.csproj" />
-    <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.Services.csproj" />
+    <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.IServices.csproj" />
   </ItemGroup>
 
 </Project>

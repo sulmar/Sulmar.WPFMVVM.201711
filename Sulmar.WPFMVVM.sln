@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.WPFMVVM.ShopPracz.WP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.WPFMVVM.ShopPracz.ViewModels", "Sulmar.WPFMVVM.ShopPracz.ViewModels\Sulmar.WPFMVVM.ShopPracz.ViewModels.csproj", "{F7102884-5525-410A-BA0E-E43667FFD60A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.WPFMVVM.ShopPracz.Services", "Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.Services.csproj", "{F0811320-B8AC-4A6D-B1E9-93EB6164E12C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.WPFMVVM.ShopPracz.IServices", "Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.IServices.csproj", "{F0811320-B8AC-4A6D-B1E9-93EB6164E12C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.WPFMVVM.Common", "Sulmar.WPFMVVM.Common\Sulmar.WPFMVVM.Common.csproj", "{F1B84291-B79B-4C3C-991A-C76AF9393F37}"
 EndProject

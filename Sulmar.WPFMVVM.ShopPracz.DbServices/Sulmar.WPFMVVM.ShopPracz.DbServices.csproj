@@ -73,9 +73,9 @@
       <Project>{fe176a03-ef03-4209-937d-d104fe805309}</Project>
       <Name>Sulmar.WPFMVVM.ShopPracz.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.Services.csproj">
+    <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.IServices.csproj">
       <Project>{f0811320-b8ac-4a6d-b1e9-93eb6164e12c}</Project>
-      <Name>Sulmar.WPFMVVM.ShopPracz.Services</Name>
+      <Name>Sulmar.WPFMVVM.ShopPracz.IServices</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
