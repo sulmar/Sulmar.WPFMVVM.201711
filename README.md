@@ -16,3 +16,5 @@ Fody https://github.com/Fody/PropertyChanged
 | ViewModels  | ViewModels |
 | Common  | Implementacja RelayCommand dla .NET Standard |
 | Common4  | Implementacja RelayCommand dla .NET Framework 4.x |
+| WPFClient  | Klient WPF |
+
