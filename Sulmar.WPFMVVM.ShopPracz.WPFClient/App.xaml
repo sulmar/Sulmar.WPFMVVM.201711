@@ -2,11 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Sulmar.WPFMVVM.ShopPracz.WPFClient"
-             StartupUri="Views/ShellView.xaml">
+             StartupUri="Views/ShellView.xaml"
+             >
     <Application.Resources>
 
         <ResourceDictionary>
+
+            <local:ViewModelLocator x:Key="ViewModelLocator" />
+
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ViewModelView.xaml" />
                 <ResourceDictionary Source="Resources/Styles.xaml" />
                 <ResourceDictionary Source="Resources/DataTemplates.xaml" />
             </ResourceDictionary.MergedDictionaries>

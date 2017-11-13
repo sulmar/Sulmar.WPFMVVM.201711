@@ -42,7 +42,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         public ProductsViewModel()
             : this(new DbProductsService())
         {
-            
+
         }
 
         private void Load()
@@ -62,6 +62,8 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         {
             // TODO: Show ProductView
             var product = new Product { Name = "Produkt 1", Color = "Red", Price = 99.9m };
+
+            // navigationService.Navigate("ProductView");
 
             productsService.Add(product);
             this.Products.Add(product);

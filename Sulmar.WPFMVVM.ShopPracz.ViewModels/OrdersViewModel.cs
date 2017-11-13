@@ -53,7 +53,7 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         private readonly IOrderDetailsService orderDetailsService;
 
         public OrdersViewModel() 
-            : this(new DbOrdersService(), new MockOrderDetailsService())
+            : this(new MockOrdersService(), new MockOrderDetailsService())
         {
         }
 

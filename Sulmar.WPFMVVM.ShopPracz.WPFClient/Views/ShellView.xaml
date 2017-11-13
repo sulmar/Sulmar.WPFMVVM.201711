@@ -8,11 +8,12 @@
         WindowState="Maximized"
         mc:Ignorable="d"
         Title="ShellView" Height="300" Width="300">
-
    
     <Window.DataContext>
         <vm:ShellViewModel />
     </Window.DataContext>
+    
+    
     
     <Grid>
         
@@ -22,18 +23,19 @@
             <!-- Panel z przyciskami -->
             
             <StackPanel Orientation="Horizontal"
-                        DockPanel.Dock="Top"
-                        >
-                <Button Content="Produkty" />
-                <Button Content="Zamówienia" />
+                        DockPanel.Dock="Top">
+                <Button Content="Produkty" Command="{Binding ShowProductsCommand}" />
+                <Button Content="Zamówienia" Command="{Binding ShowOrdersCommand}" />
             </StackPanel>
 
             <!-- Zawartość -->
 
             <Border BorderBrush="Black"
-                BorderThickness="3">
+                BorderThickness="3" Margin="0,2,0,-2" >
 
-                <Frame Source="ProductsView.xaml" />
+
+                <!-- Odpowiedni widok wstrzykiwany jest za pomocą ViewModelView.xaml -->
+                <Frame x:Name="ShellFrame" Content="{Binding SelectedViewModel, Mode=TwoWay}" />
 
             </Border>
 

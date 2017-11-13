@@ -72,6 +72,7 @@
     <Compile Include="Behaviors\DragBehavior.cs" />
     <Compile Include="CalculateCommand.cs" />
     <Compile Include="Converters\SegmentStateToBrushConverter.cs" />
+    <Compile Include="ViewModelLocator.cs" />
     <Compile Include="Views\BindingView.xaml.cs">
       <DependentUpon>BindingView.xaml</DependentUpon>
     </Compile>
@@ -99,6 +100,9 @@
     <Compile Include="Views\ProductsView.xaml.cs">
       <DependentUpon>ProductsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProductView.xaml.cs">
+      <DependentUpon>ProductView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
@@ -114,16 +118,12 @@
     <Compile Include="Views\WrapPanelView.xaml.cs">
       <DependentUpon>WrapPanelView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="ViewModelView.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Resources\DataTemplates.xaml">
@@ -167,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ProductsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProductView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -219,9 +223,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Sulmar.WPFMVVM.Common4\Sulmar.WPFMVVM.Common4.csproj">
+      <Project>{D95BA6DD-0E51-4488-BD96-23B215845D1E}</Project>
+      <Name>Sulmar.WPFMVVM.Common4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.DbServices\Sulmar.WPFMVVM.ShopPracz.DbServices.csproj">
+      <Project>{DDDC76A6-01FC-436C-B30E-9FEF23BFE958}</Project>
+      <Name>Sulmar.WPFMVVM.ShopPracz.DbServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Models\Sulmar.WPFMVVM.ShopPracz.Models.csproj">
       <Project>{FE176A03-EF03-4209-937D-D104FE805309}</Project>
       <Name>Sulmar.WPFMVVM.ShopPracz.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.Services\Sulmar.WPFMVVM.ShopPracz.IServices.csproj">
+      <Project>{F0811320-B8AC-4A6D-B1E9-93EB6164E12C}</Project>
+      <Name>Sulmar.WPFMVVM.ShopPracz.IServices</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sulmar.WPFMVVM.ShopPracz.ViewModels\Sulmar.WPFMVVM.ShopPracz.ViewModels.csproj">
       <Project>{f7102884-5525-410a-ba0e-e43667ffd60a}</Project>

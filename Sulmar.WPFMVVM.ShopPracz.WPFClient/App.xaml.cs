@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sulmar.WPFMVVM.Common4;
+using Sulmar.WPFMVVM.ShopPracz.WPFClient.Views;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +15,6 @@ namespace Sulmar.WPFMVVM.ShopPracz.WPFClient
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

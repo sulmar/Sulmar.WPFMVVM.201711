@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Sulmar.WPFMVVM.ShopPracz.WPFClient
+namespace Sulmar.WPFMVVM.ShopPracz.WPFClient.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ProductView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ProductView : Page
     {
-        public MainWindow()
+        public ProductView()
         {
             InitializeComponent();
         }
