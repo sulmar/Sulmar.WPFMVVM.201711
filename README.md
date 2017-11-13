@@ -7,7 +7,7 @@ Przykłady ze szkolenia WPF MVVM + EF
 Fody https://github.com/Fody/PropertyChanged
 
 
-|   |   |
+| Projekt  | Opis  |
 |---|---|
 | Model  | Model danych   |
 | IServices | Interfejsy usług   |
