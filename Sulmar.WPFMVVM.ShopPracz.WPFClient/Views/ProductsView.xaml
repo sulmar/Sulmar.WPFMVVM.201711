@@ -34,17 +34,10 @@
                 </DataGrid.Columns>
 
                 <i:Interaction.Triggers>
-                    
-                    
-
                     <i:EventTrigger EventName="SelectionChanged">
-
                         <i:InvokeCommandAction Command="{Binding SelectCommand}"
-                                                
                                                />
-
                     </i:EventTrigger>
-
                 </i:Interaction.Triggers>
 
             </DataGrid>

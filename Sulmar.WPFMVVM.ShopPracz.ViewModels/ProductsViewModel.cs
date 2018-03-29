@@ -51,11 +51,19 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         }
 
 
+        #region SelectCommand
+
+        private ICommand _SelectCommand;
         public ICommand SelectCommand
         {
             get
             {
-                return new RelayCommand(p => Select());
+                if (_SelectCommand == null)
+                {
+                    _SelectCommand = new RelayCommand(p => Select());
+                }
+
+                return _SelectCommand;
             }
         }
 
@@ -64,6 +72,8 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
         {
 
         }
+
+        #endregion  
 
 
 
