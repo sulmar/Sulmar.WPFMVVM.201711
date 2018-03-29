@@ -50,6 +50,23 @@ namespace Sulmar.WPFMVVM.ShopPracz.ViewModels
             Products = new ObservableCollection<Product>(productsService.Get());
         }
 
+
+        public ICommand SelectCommand
+        {
+            get
+            {
+                return new RelayCommand(p => Select());
+            }
+        }
+
+
+        private void Select()
+        {
+
+        }
+
+
+
         public ICommand AddCommand
         {
             get

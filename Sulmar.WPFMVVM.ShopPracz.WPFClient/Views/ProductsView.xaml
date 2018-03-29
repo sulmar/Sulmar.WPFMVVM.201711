@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       xmlns:local="clr-namespace:Sulmar.WPFMVVM.ShopPracz.WPFClient.Views"
       xmlns:vm="clr-namespace:Sulmar.WPFMVVM.ShopPracz.ViewModels;assembly=Sulmar.WPFMVVM.ShopPracz.ViewModels"
       mc:Ignorable="d" 
@@ -23,11 +24,28 @@
             <DataGrid ItemsSource="{Binding Products}"
                   SelectedItem="{Binding SelectedProduct}"
                       AutoGenerateColumns="False"
+                      
+                      
                   >
+                
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Name}" />
                 </DataGrid.Columns>
+
+                <i:Interaction.Triggers>
+                    
+                    
+
+                    <i:EventTrigger EventName="SelectionChanged">
+
+                        <i:InvokeCommandAction Command="{Binding SelectCommand}"
+                                                
+                                               />
+
+                    </i:EventTrigger>
+
+                </i:Interaction.Triggers>
 
             </DataGrid>
 
